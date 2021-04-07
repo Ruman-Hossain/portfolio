@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # CUSTOM APPS
     'employee',
+    'index',
 ]
 
 MIDDLEWARE = [
