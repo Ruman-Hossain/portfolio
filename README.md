@@ -1,2 +1,0 @@
-# portfolio
-Django Beginner Practice
