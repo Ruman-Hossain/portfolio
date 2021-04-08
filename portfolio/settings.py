@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     # CUSTOM APPS
     'employee',
     'index',
+    'contact',
 ]
 
 MIDDLEWARE = [
