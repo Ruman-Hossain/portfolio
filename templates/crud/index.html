@@ -1,0 +1,47 @@
+{% extends "layouts.html" %}
+
+{% block title %}
+    CRUD | HOME
+{% endblock%}
+
+
+{% block  content %}
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>CRUD</h2>
+        </div>
+      </div>
+    </section><!-- End Breadcrumbs -->
+    <div class="jumbotron">
+        <p class="align-right"><a href="{% url 'crud:store' %}" class="btn btn-primary d-inline" href="#" role="button">Add New</a></p>
+    </div>
+    <div class="card-body">
+    <table class="table table-striped">
+    <thead>
+        <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Device Model</th>
+        <th scope="col">Device Weight</th>
+        <th scope="col">Device Price</th>
+        <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for device in devices %}
+        <tr>
+            <th scope="row">{{ device.id }}</th>
+            <td>  {{ device.device_model }} </td>
+            <td>  {{ device.device_weight }} gm </td>
+            <td>  {{ device.device_price }} </td>
+            <td>
+                <a href="{{ device.id }}/edit"  class="text-primary">Edit</span></a>  
+                <a href="{{ device.id }}/delete" class="text-danger">Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>
+{% endblock  %}

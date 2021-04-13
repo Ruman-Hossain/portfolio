@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'employee',
     'index',
     'contact',
+    'crud',
 ]
 
 MIDDLEWARE = [

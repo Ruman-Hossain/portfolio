@@ -10,5 +10,6 @@ urlpatterns = [
     path('',include('index.urls')),
     path('contact/',include('contact.urls')),
     path('employee/', include('employee.urls')),
+    path('crud/', include('crud.urls')),
 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
